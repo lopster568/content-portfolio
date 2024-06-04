@@ -2229,7 +2229,7 @@ select:-webkit-autofill:focus {
  * ------------------------------------------------------------------- */
 
  #talk-btn {
-    --btn-height: var(--vspace-1);
+    --btn-height: var(--vspace-1_5);
     padding: 0 2rem;
     font-size               : var(--text-xs);
 }
@@ -2350,8 +2350,8 @@ button.btn--stroke:hover {
 
 .btn--pill,
 button.btn--pill {
-    padding-left  : 3.2rem !important;
-    padding-right : 3.2rem !important;
+    padding-left  : 2rem !important;
+    padding-right : 2rem !important;
     border-radius : 1000px !important;
 }
 
@@ -2369,6 +2369,11 @@ table {
     border-collapse : collapse;
 }
 
+.website-copy-desc {
+    font-size: 16px;
+    font-weight: 400;
+}
+
 th,
 td {
     padding       : var(--vspace-0_5) 3.2rem calc(var(--vspace-0_5) - 1px);
@@ -2381,6 +2386,7 @@ th {
     color       : var(--color-text-dark);
     font-family : var(--font-1);
     font-weight : 600;
+    font-size: 32px;
 }
 
 th:first-child,
@@ -2938,6 +2944,7 @@ img.u-pull-left {
     max-width : 1520px;
     width     : 92%;
     margin    : 0 auto var(--vspace-2);
+    margin-bottom: 0;
     overflow  : hidden;
 }
 
@@ -4012,7 +4019,7 @@ body.search-is-visible .s-header__search-inner {
     margin-bottom : var(--vspace-0_5);
 }
 
-.hero__entry-meta .cat-links a {
+.hero__entry-meta .cat-links div {
     font-weight    : 400;
     font-size      : var(--text-sm);
     text-transform : uppercase;
