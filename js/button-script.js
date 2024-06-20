@@ -21,7 +21,11 @@ button.forEach((btn) => {
         btn.classList.add('btn--primary');
 
         const title = btn.innerText.toLowerCase();
-        contentTitle.innerText = title;
+        if (title === 'seo writing') {
+            contentTitle.innerText = "SEO Writing";
+        } else {
+            contentTitle.innerText = title;
+        }
         contentDescription.innerText = content[title];
     });
 }

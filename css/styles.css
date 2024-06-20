@@ -3435,6 +3435,10 @@ img.u-pull-left {
     right     : .8rem;
 }
 
+body {
+    text-align: justify;
+}
+
 .s-header__menu-toggle span {
     display          : block;
     background-color : black;
