@@ -2121,6 +2121,19 @@ select {
     transform        : rotate(45deg);
 }
 
+.alert-container {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.alert {
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+}
+
 textarea {
     min-height : calc(4 * var(--space));
 }
@@ -2553,7 +2566,7 @@ td:last-child {
  * ------------------------------------------------------------------- */
 .alert-box {
     padding       : var(--vspace-0_75) 4rem var(--vspace-0_75) 3.2rem;
-    margin-bottom : var(--vspace-1);
+    /* margin-bottom : var(--vspace-1); */
     border-radius : var(--border-radius);
     font-family   : var(--font-1);
     font-weight   : 500;

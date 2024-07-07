@@ -13,6 +13,14 @@
         document.documentElement.classList.remove('no-js');
         document.documentElement.classList.add('js');
     </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init({
+              publicKey: "745ckEPSlSe2jlvq9",
+            });
+        })();
+    </script>
 
     <!-- CSS
     ================================================== -->
@@ -21,16 +29,28 @@
 
     <!-- favicons
     ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
     <link rel="manifest" href="site.webmanifest">
 
 </head>
 
 
 <body id="top">
-
+    <div class="alert-container" >
+    <div style="display: none;" id="alert-error" class="alert-box alert-box--error alert">
+        <p style="margin-bottom: 0px;" >Error: Failed to send, kindly contact me via email</p>
+        <span class="alert-box__close"></span>
+    </div><!-- end error -->
+    <div id="alert-success" style="display: none;" class="alert-box alert-box--success alert">
+        <p style="margin-bottom: 0px;" >Success: Your query has been sent!</p>
+        <span class="alert-box__close"></span>
+    </div>
+</div>
+    
 
     <!-- preloader
     ================================================== -->
@@ -379,13 +399,13 @@ After honing my skills and gaining industry experience from three content writin
                 
                 <h3 class="u-add-bottom">Start a conversation</h3>
 
-                <form>
+                <form id="contact-form" >
                     <div>
-                        <label for="sampleInput">Your email</label>
-                        <input class="u-fullwidth" type="email" placeholder="test@mailbox.com" id="sampleInput">
+                        <label for="email">Your email</label>
+                        <input class="u-fullwidth" type="email" placeholder="test@mailbox.com" id="email">
                     </div>
-                    <label for="exampleMessage">Message</label>
-                    <textarea rows="3" class="u-fullwidth" placeholder="Your message" id="exampleMessage"></textarea>
+                    <label for="message">Message</label>
+                    <textarea rows="3" class="u-fullwidth" placeholder="Your message" id="message"></textarea>
 
                     <input class="btn--primary u-fullwidth" type="submit" value="Submit">
                 </form>
@@ -513,6 +533,7 @@ After honing my skills and gaining industry experience from three content writin
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
         <script src="js/button-script.js"></script>
+        <script src="js/contact.js"></script>
 </body>
 
 </html>
